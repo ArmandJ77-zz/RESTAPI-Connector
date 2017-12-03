@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.TestHost;
 using Project.Solar.Flare.Test.Api;
 using System;
 using System.Net.Http;
+using Project.Solar.Flare.Tests.Objects.ObjectMothers;
 
 namespace Project.Solar.Flare.Tests.Integration.Tests.Infrastructure
 {
@@ -10,6 +11,7 @@ namespace Project.Solar.Flare.Tests.Integration.Tests.Infrastructure
   {
     private TestServer _server;
     public HttpClient Client { get; private set; }
+    public ApiRequestService ApiService { get; set; }
 
     public TestContext()
     {
@@ -19,9 +21,11 @@ namespace Project.Solar.Flare.Tests.Integration.Tests.Infrastructure
     private void SetUpClient()
     {
       _server = new TestServer(new WebHostBuilder()
-        .UseStartup<Startup>());
+        .UseStartup<Startup>())
+      { BaseAddress = new Uri(PathObjectMother.TestServerBaseUrl) };
 
       Client = _server.CreateClient();
+      ApiService = new ApiRequestService(PathObjectMother.TestServerBaseUrl);
     }
 
     public void Dispose()
