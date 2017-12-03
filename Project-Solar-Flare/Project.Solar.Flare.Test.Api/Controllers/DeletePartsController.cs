@@ -2,24 +2,19 @@
 
 namespace Project.Solar.Flare.Test.Api.Controllers
 {
+  [Route("api/[controller]/[action]")]
   public class DeletePartsController : Controller
   {
-    protected DeletePartsController()
+    public DeletePartsController()
     {
     }
 
-    [HttpDelete]
-    public int DeleteFromQuery([FromQuery] int id)
-    {
-      return 1;
-    }
-
-    [HttpDelete]
-    public int DeleteFromRoute([FromRoute] int id)
+    [HttpDelete("{id}")]
+    public int Delete(int id)
     {
       return 1;
     }
-
+    
     [HttpDelete]
     public int DeleteFromBody([FromBody] int id)
     {

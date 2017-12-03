@@ -17,7 +17,7 @@ namespace Project.Solar.Flare.Test.Api.Controllers
     public List<PartDto> Get()
       => new PartsObjectMother().AListOfPartDtos;
 
-    //controller/action?id=1
+    //GetParts/GetFromQuery?id=1
     [HttpGet]
     public PartDto GetFromQuery([FromQuery] int id)
       => new PartsObjectMother().AListOfPartDtos.FirstOrDefault(x => x.Id == id);

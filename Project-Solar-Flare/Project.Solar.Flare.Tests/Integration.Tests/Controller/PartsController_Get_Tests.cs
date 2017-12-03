@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using Newtonsoft.Json;
 using NUnit.Framework;
-using Project.Solar.Flare.Tests.Unit.Tests.Infrastructure;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 using Project.Solar.Flare.DTO;
+using Project.Solar.Flare.Tests.Integration.Tests.Infrastructure;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Project.Solar.Flare.Tests.Unit.Tests.Controller
+namespace Project.Solar.Flare.Tests.Integration.Tests.Controller
 {
   [TestFixture]
-  public class PartsController_Put_Tests : BaseTest
+  public class PartsController_Get_Tests : BaseTest
   {
 
     [TestCase]

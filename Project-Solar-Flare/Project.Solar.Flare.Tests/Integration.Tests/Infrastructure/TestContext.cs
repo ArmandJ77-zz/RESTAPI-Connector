@@ -4,7 +4,7 @@ using Project.Solar.Flare.Test.Api;
 using System;
 using System.Net.Http;
 
-namespace Project.Solar.Flare.Tests.Unit.Tests.Infrastructure
+namespace Project.Solar.Flare.Tests.Integration.Tests.Infrastructure
 {
   public class TestContext : IDisposable
   {

@@ -3,20 +3,22 @@ using Project.Solar.Flare.DTO;
 
 namespace Project.Solar.Flare.Test.Api.Controllers
 {
+  [Route("api/[controller]/[action]")]
   public class PutPartsController : Controller
   {
     public PutPartsController()
     {
+      
     }
 
     [HttpPut]
-    public int CreateFromBody([FromBody] PartDto data)
+    public int FromBody([FromBody] PartDto data)
     {
       return 1;
     }
 
     [HttpPut]
-    public int CreateFromForm([FromForm] PartDto data)
+    public int FromForm([FromForm] PartDto data)
     {
       return 1;
     }

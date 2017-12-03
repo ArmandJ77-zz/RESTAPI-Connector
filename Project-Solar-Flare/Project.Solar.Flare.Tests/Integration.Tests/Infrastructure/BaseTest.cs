@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Project.Solar.Flare.Tests.Unit.Tests.Infrastructure
+namespace Project.Solar.Flare.Tests.Integration.Tests.Infrastructure
 {
   [TestFixture]
   public class BaseTest
